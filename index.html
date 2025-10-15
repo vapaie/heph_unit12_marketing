@@ -1,0 +1,3318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hephzibah Estate Unit 12 | Your South African Paradise Awaits</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            overflow-x: hidden;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg,
+                    rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.6)),
+                url("images/kudu1.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: heroFade 2s ease-in;
+            z-index: 1;
+        }
+
+        @keyframes heroFade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 1000px;
+            padding: 2rem;
+            animation: slideUp 1.5s ease-out 0.5s both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: "Raleway", sans-serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-weight: 300;
+            letter-spacing: 3px;
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .hero p {
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            font-style: italic;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 30px;
+            background: rgba(0, 77, 51, 0.5);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 77, 51, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(212, 165, 116, 0.4);
+            background: linear-gradient(45deg, #c19653, #a67c3a);
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 1;
+        }
+
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .logo {
+            font-family: "Raleway", sans-serif;
+            font-size: 1.6rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: #d4a574;
+            background: rgba(26, 37, 47, 0.95);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1.5rem;
+            border-radius: 0%;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo:hover {
+            color: white;
+            background: #a60607;
+        }
+
+        .nav-trigger {
+            background: rgba(26, 37, 47, 0.95);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1.5rem;
+            border-radius: 0%;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #d4a574;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 1.4rem;
+            height: 3rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-trigger:hover {
+            background: #a60607;
+            color: white;
+        }
+
+        .hamburger {
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            color: inherit;
+        }
+
+        .nav-content {
+            position: absolute;
+            top: 100%;
+            right: 1rem;
+            background: rgba(26, 37, 47, 0.95);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            margin-top: 5px;
+            min-width: 200px;
+        }
+
+        .navbar.expanded .nav-content {
+            max-height: 350px;
+            opacity: 1;
+            padding: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 0.5rem;
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.3rem 0.5rem;
+            border-left: 3px solid transparent;
+            border-radius: 5px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            letter-spacing: 1px;
+            display: block;
+        }
+
+        .nav-links a:hover {
+            color: #d4a574;
+            border-left-color: #d4a574;
+            transform: translateX(5px);
+            background: rgba(212, 165, 116, 0.1);
+        }
+
+        .section {
+            min-height: 100vh;
+            padding: 80px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+                url("images/gallery/sunset1.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .features-section {
+            min-height: 100vh;
+            padding: 80px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+                url("images/gallery/sunset1.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .features-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .features-container {
+            width: 100%;
+            max-width: none;
+            padding: 0 2rem;
+        }
+
+        .section-title1 {
+            text-align: center;
+            font-family: "Raleway", sans-serif;
+            font-size: 3.2rem;
+            margin-bottom: 3rem;
+            color: white;
+            position: relative;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .section-title1::after {
+            content: "";
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(45deg, #d4a574, #c19653);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title2 {
+            text-align: center;
+            font-family: "Raleway", sans-serif;
+            font-size: 3.2rem;
+            margin-bottom: 3rem;
+            color: white;
+            position: relative;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .section-title2::after {
+            content: "";
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(45deg, #d4a574, #c19653);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title3 {
+            text-align: center;
+            font-family: "Raleway", sans-serif;
+            font-size: 3.2rem;
+            margin-bottom: 3rem;
+            color: white;
+            position: relative;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .section-title3::after {
+            content: "";
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(45deg, #d4a574, #c19653);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title4 {
+            text-align: center;
+            font-family: "Raleway", sans-serif;
+            font-size: 3.2rem;
+            margin-bottom: 3rem;
+            color: white;
+            position: relative;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .section-title4::after {
+            content: "";
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(45deg, #d4a574, #c19653);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .video-section {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            padding: 80px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .video-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .video-title h1 {
+            font-family: "Raleway", sans-serif;
+            font-size: 3.2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #fff;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .video-title h1::after {
+            content: "";
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(45deg, #d4a574, #c19653);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .video-wrapper-main {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .main-video {
+            width: 100%;
+            height: auto;
+            min-height: 280px;
+            max-height: 500px;
+            display: block;
+            background: #000;
+            object-fit: contain;
+        }
+
+        .video-curtain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(26, 26, 26, 0.95) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+            cursor: pointer;
+            transition: opacity 0.5s ease;
+            pointer-events: auto;
+        }
+
+        .video-curtain.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .curtain-play-icon {
+            width: 80px;
+            height: 80px;
+            border: 3px solid #d4a574;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .video-curtain:hover .curtain-play-icon {
+            transform: scale(1.1);
+            border-color: #c19653;
+            box-shadow: 0 0 20px rgba(212, 165, 116, 0.5);
+        }
+
+        .curtain-play-icon::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 25px solid #d4a574;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            margin-left: 5px;
+        }
+
+        .video-curtain:hover .curtain-play-icon::after {
+            border-left-color: #c19653;
+        }
+
+        .curtain-text {
+            color: #fff;
+            font-family: "Raleway", sans-serif;
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 70%, transparent 100%);
+            padding: 20px 15px 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 10;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .video-controls.hide {
+            opacity: 0;
+            transform: translateY(100%);
+            pointer-events: none;
+        }
+
+        .control-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .control-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .video-progress {
+            flex: 1;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .video-progress:hover {
+            height: 8px;
+        }
+
+        .progress-filled {
+            height: 100%;
+            background: #4CAF50;
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        .video-time {
+            color: #fff;
+            font-size: 0.85rem;
+            font-family: 'Courier New', monospace;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .video-description {
+            max-width: 900px;
+            margin: 2rem auto 0;
+            text-align: center;
+        }
+
+        .video-description p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ccc;
+            font-weight: 300;
+        }
+
+        .video-wrapper-main:-webkit-full-screen {
+            width: 100vw !important;
+            height: 100vh !important;
+            max-width: none !important;
+            max-height: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: #000 !important;
+            border-radius: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .video-wrapper-main:-moz-full-screen {
+            width: 100vw !important;
+            height: 100vh !important;
+            max-width: none !important;
+            max-height: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: #000 !important;
+            border-radius: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .video-wrapper-main:fullscreen {
+            width: 100vw !important;
+            height: 100vh !important;
+            max-width: none !important;
+            max-height: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: #000 !important;
+            border-radius: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .video-wrapper-main:-webkit-full-screen .main-video {
+            width: auto !important;
+            height: 100vh !important;
+            max-height: 100vh !important;
+            max-width: 100vw !important;
+            min-height: 0 !important;
+            object-fit: contain !important;
+        }
+
+        .video-wrapper-main:-moz-full-screen .main-video {
+            width: auto !important;
+            height: 100vh !important;
+            max-height: 100vh !important;
+            max-width: 100vw !important;
+            min-height: 0 !important;
+            object-fit: contain !important;
+        }
+
+        .video-wrapper-main:fullscreen .main-video {
+            width: auto !important;
+            height: 100vh !important;
+            max-height: 100vh !important;
+            max-width: 100vw !important;
+            min-height: 0 !important;
+            object-fit: contain !important;
+        }
+
+        .video-wrapper-main:-webkit-full-screen .video-controls {
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+        }
+
+        .video-wrapper-main:-moz-full-screen .video-controls {
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+        }
+
+        .video-wrapper-main:fullscreen .video-controls {
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+        }
+
+        .slideshow-section {
+            background: linear-gradient(135deg, #1a252f, #2c3e50);
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            padding: 0;
+        }
+
+        .slideshow-container {
+            max-width: min(1600px, 75vw);
+            width: 100%;
+            height: 100%;
+            padding: 60px 2rem 40px 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .slideshow-title {
+            text-align: center;
+            font-family: "Raleway", sans-serif;
+            font-size: 3.2rem;
+            margin-bottom: 2rem;
+            color: white;
+            position: relative;
+            font-weight: 300;
+            letter-spacing: 2px;
+            flex-shrink: 0;
+        }
+
+        .slideshow-title::after {
+            content: "";
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(45deg, #d4a574, #c19653);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .scroll-snap-gallery {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 200px);
+            max-height: 800px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            flex-grow: 1;
+        }
+
+        .scroll-snap-container {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 0.5s ease-in-out;
+            will-change: transform;
+        }
+
+        .scroll-snap-container.no-transition {
+            transition: none;
+        }
+
+        .scroll-snap-slide {
+            min-width: 100%;
+            width: 100%;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .scroll-snap-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-caption {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .scroll-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+            width: 22px;
+            height: 34px;
+            cursor: pointer;
+            transition: all 0.3s ease, opacity 0.75s ease;
+            opacity: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .scroll-controls:hover {
+            background: rgb(116, 166, 212, 0.6);
+            color: white;
+            border-color: white;
+            box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+        }
+
+        .prev-btn {
+            left: 0px;
+            border-radius: 0 15px 15px 0;
+            border-left: none;
+        }
+
+        .next-btn {
+            right: 0px;
+            border-radius: 15px 0 0 15px;
+            border-right: none;
+        }
+
+        .scroll-snap-gallery.controls-hidden .scroll-controls {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .scroll-snap-gallery:hover .scroll-controls,
+        .scroll-snap-gallery.user-interacting .scroll-controls {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .scroll-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        .scroll-indicators::before,
+        .scroll-indicators::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        .scroll-indicator {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .scroll-indicator::before,
+        .scroll-indicator::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        .scroll-indicator.active {
+            background: #d4a574;
+            transform: scale(1.2);
+            border-color: rgba(212, 165, 116, 0.3);
+            box-shadow: 0 0 20px rgba(212, 165, 116, 0.5);
+        }
+
+        .scroll-indicator:hover {
+            background: rgba(212, 165, 116, 0.7);
+            transform: scale(1.1);
+        }
+
+        /* SOLUTION: Hide navbar when slideshow is fullscreen */
+        .navbar.hide-for-fullscreen {
+            display: none;
+        }
+
+        /* Button stays at consistent position - no overrides needed */
+        .scroll-snap-gallery .fullscreen-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            z-index: 101;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scroll-snap-gallery .fullscreen-btn:hover {
+            background: rgba(212, 165, 116, 0.9);
+            transform: scale(1.1);
+        }
+
+        .scroll-snap-gallery.fullscreen {
+            position: fixed;
+            top: 2.5vh;
+            left: 2.5vw;
+            width: 95vw;
+            height: 95vh;
+            z-index: 9999;
+            border-radius: 15px;
+            max-width: none;
+            max-height: none;
+        }
+
+        .scroll-snap-gallery.fullscreen .scroll-snap-slide img {
+            object-fit: contain;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            max-width: min(1600px, 75vw);
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            height: fit-content;
+        }
+
+        .feature-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,
+                    transparent,
+                    rgba(212, 165, 116, 0.1),
+                    transparent);
+            transition: left 0.6s ease;
+        }
+
+        .feature-card:hover::before {
+            left: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #d4a574;
+        }
+
+        .feature-card h3 {
+            font-family: "Raleway", sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .feature-card p {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #5a6c7d;
+            font-size: 0.95rem;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-family: "Raleway", sans-serif;
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #d4a574;
+            display: block;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .stat-item span:last-child {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .gallery-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+                url("images/gallery/oak tree1.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .gallery-container {
+            width: 100%;
+            max-width: none;
+            padding: 0 2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+            max-width: min(1600px, 75vw);
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            background: #f0f0f0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.4s ease;
+            display: block;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .gallery-overlay span {
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .gallery-modal.active {
+            display: block;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90vw;
+            height: 90vh;
+            max-width: 1200px;
+            max-height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-nav:hover {
+            background: rgba(212, 165, 116, 0.9);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 8px 25px rgba(212, 165, 116, 0.3);
+        }
+
+        .modal-prev {
+            left: 30px;
+        }
+
+        .modal-next {
+            right: 30px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            z-index: 10001;
+        }
+
+        .modal-close:hover {
+            background: rgba(166, 6, 7, 0.9);
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(166, 6, 7, 0.3);
+        }
+
+        .modal-counter {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.9rem;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            z-index: 10001;
+        }
+
+        .gallery-note {
+            text-align: center;
+            margin-top: 2rem;
+            font-style: italic;
+            color: #ccc;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+
+        .contact-section-new {
+            height: 100vh;
+            background: linear-gradient(135deg, #0a0f1c, #1a252f);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .contact-section-new {
+                height: auto;
+                min-height: 100vh;
+                min-height: 100dvh;
+                overflow: visible;
+            }
+        }
+
+        .contact-section-new::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(166, 6, 7, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(102, 182, 210, 0.08) 0%, transparent 50%);
+            animation: backgroundShift 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundShift {
+
+            0%,
+            100% {
+                transform: translateX(0) translateY(0);
+            }
+
+            33% {
+                transform: translateX(-10px) translateY(-5px);
+            }
+
+            66% {
+                transform: translateX(10px) translateY(5px);
+            }
+        }
+
+        .contact-header {
+            text-align: center;
+            padding: 2rem 2rem 1rem 2rem;
+            position: relative;
+            z-index: 10;
+            flex-shrink: 0;
+        }
+
+        .contact-title {
+            font-family: "Raleway", sans-serif;
+            font-size: 3.2rem;
+            font-weight: 300;
+            color: white;
+            margin-bottom: 3rem;
+            letter-spacing: 2px;
+            text-align: center;
+            position: relative;
+        }
+
+        .contact-title::after {
+            content: "";
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(45deg, #d4a574, #c19653);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .contact-subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+        }
+
+        .contact-main-content {
+            flex: 1;
+            display: flex;
+            padding: 0 2rem;
+            gap: 2rem;
+            position: relative;
+            z-index: 10;
+            min-height: 0;
+            max-width: 95%;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .property-facts {
+            width: 280px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .fact-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 165, 116, 0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 165, 116, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .fact-card:hover::before {
+            left: 100%;
+        }
+
+        .fact-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(212, 165, 116, 0.4);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .fact-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .fact-label {
+            font-size: 0.8rem;
+            color: #66b6d2;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+        }
+
+        .fact-value {
+            font-size: 0.9rem;
+            color: white;
+            line-height: 1.4;
+        }
+
+        .contact-form-modern {
+            width: 650px;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-title {
+            font-size: 1.2rem;
+            color: #66b6d2;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .form-subtitle {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-grid-modern {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group-modern {
+            position: relative;
+        }
+
+        .form-group-modern.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-input-modern {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 165, 116, 0.3);
+            border-radius: 8px;
+            color: white;
+            font-size: 0.9rem;
+            font-family: "Montserrat", sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .form-input-modern select,
+        select.form-input-modern {
+            background: rgba(26, 37, 47, 0.95);
+            color: white;
+            border: 1px solid rgba(212, 165, 116, 0.3);
+        }
+
+        .form-input-modern select option,
+        select.form-input-modern option {
+            background: rgba(26, 37, 47, 0.95);
+            color: white;
+            padding: 0.5rem;
+        }
+
+        .form-input-modern select option:hover,
+        select.form-input-modern option:hover {
+            background: rgba(212, 165, 116, 0.2);
+            color: #d4a574;
+        }
+
+        .form-input-modern:focus {
+            outline: none;
+            border-color: #d4a574;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+        }
+
+        .form-input-modern::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-textarea-modern {
+            width: 100%;
+            height: 80px;
+            padding: 0.8rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 165, 116, 0.3);
+            border-radius: 8px;
+            color: white;
+            font-size: 0.9rem;
+            font-family: "Montserrat", sans-serif;
+            resize: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-textarea-modern:focus {
+            outline: none;
+            border-color: #d4a574;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+        }
+
+        .submit-btn-modern {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #004d33, #006644);
+            border: 1px solid rgba(212, 165, 116, 0.3);
+            border-radius: 8px;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 0.6rem;
+        }
+
+        .submit-btn-modern:hover {
+            background: linear-gradient(135deg, #006644, #008855);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 77, 51, 0.3);
+        }
+
+        .map-panel {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .map-header {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .map-title {
+            font-size: 1rem;
+            color: #66b6d2;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .map-container-modern {
+            flex: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            min-height: 200px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            background: #1a252f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .map-container-modern iframe {
+            border: 0;
+        }
+
+        .location-details-modern {
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+        }
+
+        .location-highlight {
+            color: #d4a574;
+            font-weight: 600;
+        }
+
+        .contact-footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 10;
+            flex-shrink: 0;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            width: 44px;
+            height: 44px;
+            background: #004d33;
+            color: white;
+            border: 1px solid white;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            z-index: 999;
+            box-shadow: 0 8px 25px rgba(0, 77, 51, 0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 15px 35px rgba(166, 6, 7, 0.4);
+            background: #a60607;
+            color: white;
+        }
+
+        .scroll-indicator-hero {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            animation: bounce 2s infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        .scroll-indicator-hero * {
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        .scroll-indicator-hero::before,
+        .scroll-indicator-hero::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        .scroll-arrow {
+            font-size: 2rem;
+            line-height: 1;
+            margin-bottom: 5px;
+            background: none;
+            border: none;
+            outline: none;
+            color: inherit;
+        }
+
+        .scroll-arrow::before,
+        .scroll-arrow::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        .scroll-text {
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.9rem;
+            line-height: 1;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: none;
+            border: none;
+            outline: none;
+            list-style: none;
+            list-style-type: none;
+            color: inherit;
+        }
+
+        .scroll-text::before,
+        .scroll-text::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .video-section {
+                padding: 0px 15px;
+            }
+
+
+            .main-video {
+                min-height: 200px;
+                max-height: 350px;
+            }
+
+            .control-button {
+                padding: 8px 12px;
+                font-size: 0.8rem;
+            }
+
+            .hero {
+                background-attachment: scroll;
+                padding: 0 1rem;
+            }
+
+            .section {
+                background-attachment: scroll;
+            }
+
+            .features-section {
+                background-attachment: scroll;
+            }
+
+            .gallery-section {
+                background-attachment: scroll;
+            }
+
+            .gallery-container {
+                padding: 0 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+                letter-spacing: 2px;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .section-title1,
+            .section-title2,
+            .section-title3,
+            .section-title4,
+            .video-title h1 {
+                font-size: 2.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                max-width: 100%;
+            }
+
+            .gallery-item {
+                height: 280px;
+            }
+
+            .gallery-item img {
+                height: 280px;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .stat-item {
+                padding: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 3rem;
+            }
+
+            .slideshow-section {
+                padding-bottom: 80px;
+            }
+
+            .scroll-snap-gallery {
+                height: 60vh;
+            }
+
+            .slideshow-title {
+                font-size: 2.5rem;
+            }
+
+            .scroll-controls {
+                width: 22px;
+                height: 34px;
+                font-size: 18px;
+            }
+
+            .prev-btn {
+                border-radius: 0 15px 15px 0;
+            }
+
+            .next-btn {
+                border-radius: 15px 0 0 15px;
+            }
+
+            .slide-caption {
+                bottom: 20px;
+                left: 20px;
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+
+            .contact-header {
+                padding: 1.5rem 1rem 1rem 1rem;
+            }
+
+            .contact-title {
+                font-size: 2.5rem;
+            }
+
+            .contact-main-content {
+                flex-direction: column;
+                padding: 0 1rem;
+                gap: 1.5rem;
+                max-width: 100%;
+                margin: 0;
+            }
+
+            .property-facts {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .contact-form-modern,
+            .map-panel {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .form-grid-modern {
+                grid-template-columns: 1fr;
+            }
+
+            .map-container-modern {
+                min-height: 180px;
+            }
+
+            .contact-footer {
+                padding: 1rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slideshow-section {
+                padding-bottom: 60px;
+                padding-top: 1rem;
+            }
+
+            .scroll-snap-gallery {
+                height: 50vh;
+            }
+
+            .slideshow-title {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+                letter-spacing: 1px;
+                padding-top: 1rem;
+            }
+
+            .section-title1,
+            .section-title2,
+            .section-title3,
+            .section-title4,
+            .contact-title,
+            .video-title h1 {
+                font-size: 1.6rem;
+                margin-bottom: 2rem;
+                letter-spacing: 1px;
+                padding-top: 1rem;
+            }
+
+            .video-title {
+                margin-bottom: 1rem;
+            }
+
+            .scroll-controls {
+                width: 22px;
+                height: 34px;
+                font-size: 18px;
+            }
+
+            .prev-btn {
+                border-radius: 0 15px 15px 0;
+            }
+
+            .next-btn {
+                border-radius: 15px 0 0 15px;
+            }
+
+            .scroll-indicators {
+                margin-top: 20px;
+                gap: 8px;
+            }
+
+            .scroll-indicator {
+                width: 10px;
+                height: 10px;
+            }
+
+            .nav-header {
+                padding: 0.5rem;
+            }
+
+            .logo {
+                font-size: 1rem;
+                padding: 0.3rem 0.8rem;
+                height: 2rem;
+                max-width: 60%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            .nav-trigger {
+                padding: 0.3rem 0.8rem;
+                height: 2rem;
+                font-size: 1rem;
+            }
+
+            .nav-content {
+                right: 0.5rem;
+                min-width: 140px;
+            }
+
+            .hero {
+                padding-top: 4rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+                letter-spacing: 1px;
+                margin-bottom: 0.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+                line-height: 1.5;
+            }
+
+            .section {
+                padding: 80px 0 60px 0;
+            }
+
+            .features-section {
+                padding: 80px 0 60px 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .stat-item {
+                padding: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .feature-card {
+                padding: 1.5rem;
+            }
+
+            .gallery-item {
+                height: 220px;
+            }
+
+            .gallery-item img {
+                height: 220px;
+            }
+
+            .container {
+                padding: 0 0.8rem;
+            }
+
+            .slideshow-container {
+                padding: 0 1rem;
+            }
+
+            .features-container {
+                padding: 0 0.8rem;
+            }
+
+            .gallery-container {
+                padding: 0 0.8rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: 14px 26px;
+            }
+
+            .contact-header {
+                padding: 1rem 0.5rem 0.5rem 0.5rem;
+            }
+
+
+            .contact-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .property-facts {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+
+            .contact-main-content {
+                padding: 0 0.5rem;
+                gap: 1rem;
+                max-width: 100%;
+                margin: 0;
+            }
+
+            .contact-form-modern,
+            .map-panel {
+                padding: 1rem;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .fact-card {
+                padding: 0.8rem;
+            }
+
+            .fact-icon {
+                font-size: 1.2rem;
+                margin-bottom: 0.3rem;
+            }
+
+            .fact-label {
+                font-size: 0.7rem;
+                margin-bottom: 0.2rem;
+            }
+
+            .fact-value {
+                font-size: 0.8rem;
+                line-height: 1.3;
+            }
+
+            .form-header {
+                margin-bottom: 1rem;
+            }
+
+            .form-title {
+                font-size: 1.1rem;
+            }
+
+            .form-subtitle {
+                font-size: 0.8rem;
+            }
+
+            .form-input-modern,
+            .form-textarea-modern {
+                padding: 0.7rem 0.8rem;
+                font-size: 0.85rem;
+            }
+
+            .submit-btn-modern {
+                padding: 0.8rem;
+                font-size: 0.85rem;
+            }
+
+            .map-container-modern {
+                min-height: 160px;
+            }
+
+            .location-details-modern {
+                font-size: 0.75rem;
+            }
+
+            .contact-footer {
+                padding: 0.8rem 0.5rem;
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .logo {
+                font-size: 0.9rem;
+                padding: 0.25rem 0.6rem;
+                height: 1.8rem;
+            }
+
+            .nav-trigger {
+                padding: 0.25rem 0.6rem;
+                height: 1.8rem;
+                font-size: 0.75rem;
+            }
+
+            .slideshow-title {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-header">
+            <a href="#home" class="logo">Hephzibah Estate</a>
+            <div class="nav-trigger" id="navTrigger">
+                <span>Menu</span>
+                <span class="hamburger">☰</span>
+            </div>
+        </div>
+        <div class="nav-content">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#slideshow">Slideshow</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="floating">Your South African Paradise</h1>
+            <p>
+                2,000m² of tranquil luxury in the heart of Mpumalanga's wildlife
+                corridor
+            </p>
+            <a href="#contact" class="cta-button">Discover Your Sanctuary</a>
+        </div>
+
+        <div class="scroll-indicator-hero">
+            <div class="scroll-arrow">↓</div>
+            <div class="scroll-text">Explore</div>
+        </div>
+    </section>
+
+    <section class="features-section" id="features">
+        <div class="features-container">
+            <h2 class="section-title1">Why Hephzibah Estate?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏞️</div>
+                    <h3>Expansive Living</h3>
+                    <p>
+                        2,000m² of pristine land with a thoughtfully designed 4-bedroom
+                        home offering space, privacy, and breathtaking views of the
+                        African landscape.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌅</div>
+                    <h3>Peaceful Sanctuary</h3>
+                    <p>
+                        Escape the chaos of modern life in this tranquil haven where
+                        birdsong replaces traffic noise and star-filled skies replace city
+                        lights.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏡</div>
+                    <h3>Complete Comfort</h3>
+                    <p>
+                        Fully equipped with modern amenities including double garage,
+                        workshop, top and bottom decks looking to the Wilge river,
+                        entertainment areas, and reliable estate-managed utilities.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Paradise</h3>
+                    <p>
+                        Safe, secure estate environment perfect for families. Children can
+                        explore nature freely while parents enjoy peace of mind.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>Exceptional Value</h3>
+                    <p>
+                        Premium sectional title property significantly undervalued by
+                        traditional metrics - a rare opportunity for discerning investors.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🦌</div>
+                    <h3>Wildlife Gateway</h3>
+                    <p>
+                        Experience authentic African wildlife daily. Within 2-3 hours of
+                        world-class Safari destinations including Kruger National Park and
+                        private reserves.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section stats-section visible" id="stats">
+        <div class="container">
+            <h2 class="section-title2">Property Highlights</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">2,000</span>
+                    <span>Square Meters</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4</span>
+                    <span>Bedrooms</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span>Bathrooms</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50</span>
+                    <span>Units in Estate</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50 (50 min)</span>
+                    <span>km from Witbank</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3.5M</span>
+                    <span>Rand Value</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section gallery-section visible" id="gallery">
+        <div class="gallery-container">
+            <h2 class="section-title3">Experience the Beauty</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-gallery-index="5">
+                    <img src="images/gallery/Entrance Gate C16.jpg" alt="Welcome Home!" />
+                    <div class="gallery-overlay">
+                        <span>Welcome Home!</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-gallery-index="0">
+                    <img src="images/gallery/Spacious Family Home.jpg" alt="Spacious Family Home" />
+                    <div class="gallery-overlay">
+                        <span>Spacious Family Home</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-gallery-index="1">
+                    <img src="images/gallery/mature garden1.jpg" alt="Mature Gardens" />
+                    <div class="gallery-overlay">
+                        <span>Mature Gardens</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-gallery-index="2">
+                    <img src="images/gallery/kudu2.jpg" alt="Wildlife Visitors" />
+                    <div class="gallery-overlay">
+                        <span>Wildlife Visitors</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-gallery-index="3">
+                    <img src="images/gallery/sunrize1.jpg" alt="Stunning Sunrises" />
+                    <div class="gallery-overlay">
+                        <span>Stunning Sunrises</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-gallery-index="4">
+                    <img src="images/gallery/entertainment area1.jpg" alt="Entertainment Areas" />
+                    <div class="gallery-overlay">
+                        <span>Entertainment Areas</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-gallery-index="5">
+                    <img src="images/gallery/entertainment area3.jpg" alt="Around the Fire" />
+                    <div class="gallery-overlay">
+                        <span>Around the Fire</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-gallery-index="5">
+                    <img src="images/gallery/modern amenities1.jpg" alt="Modern Amenities" />
+                    <div class="gallery-overlay">
+                        <span>Modern Amenities</span>
+                    </div>
+                </div>
+            </div>
+            <p class="gallery-note">
+                Professional photography and virtual tours available upon request
+            </p>
+        </div>
+    </section>
+
+    <div class="gallery-modal" id="galleryModal">
+        <div class="modal-content">
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <div class="modal-caption" id="modalCaption"></div>
+            <div class="modal-counter" id="modalCounter">1 / 6</div>
+
+            <button class="modal-nav modal-prev" id="modalPrev" aria-label="Previous image">‹</button>
+            <button class="modal-nav modal-next" id="modalNext" aria-label="Next image">›</button>
+            <button class="modal-close" id="modalClose" aria-label="Close gallery">×</button>
+        </div>
+    </div>
+
+    <section class="video-section" id="video">
+        <div class="video-title">
+            <h1>Experience Hephzibah</h1>
+        </div>
+
+        <div class="video-wrapper-main" id="videoContainer">
+            <video class="main-video" id="mainVideo">
+                <source src="video/Maya.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="video-curtain" id="videoCurtain">
+                <div class="curtain-play-icon"></div>
+                <div class="curtain-text">Click to Play</div>
+            </div>
+
+            <div class="video-controls" id="videoControls">
+                <button class="control-button" id="playPauseBtn">Play</button>
+                <div class="video-progress" id="videoProgress">
+                    <div class="progress-filled" id="progressFilled"></div>
+                </div>
+                <span class="video-time" id="videoTime">0:00 / 0:00</span>
+                <button class="control-button" id="fullscreenBtn">Fullscreen</button>
+            </div>
+        </div>
+
+        <div class="video-description">
+            <p>A glimpse into the natural beauty and authentic experience at Hephzibah Estate, Unit 12</p>
+        </div>
+    </section>
+
+    <section class="slideshow-section visible" id="slideshow">
+        <div class="slideshow-container">
+            <h2 class="slideshow-title">Property Showcase</h2>
+
+            <div class="scroll-snap-gallery" id="mainSlideshow">
+                <div class="scroll-snap-container" id="scrollSnapContainer">
+                    <div class="scroll-snap-slide">
+                        <img src="images/gallery/Spacious Family Home.jpg" alt="Spacious Family Home">
+                        <div class="slide-caption">Spacious Family Home</div>
+                    </div>
+                    <div class="scroll-snap-slide">
+                        <img src="images/gallery/mature garden1.jpg" alt="Mature Gardens">
+                        <div class="slide-caption">Mature Gardens</div>
+                    </div>
+                    <div class="scroll-snap-slide">
+                        <img src="images/gallery/kudu2.jpg" alt="Wildlife Visitors">
+                        <div class="slide-caption">Wildlife Visitors</div>
+                    </div>
+                    <div class="scroll-snap-slide">
+                        <img src="images/gallery/sunrize1.jpg" alt="Stunning Sunrises">
+                        <div class="slide-caption">Stunning Sunrises</div>
+                    </div>
+                    <div class="scroll-snap-slide">
+                        <img src="images/gallery/jacaranda1.jpg" alt="Stunning Jacaranda">
+                        <div class="slide-caption">Stunning Jacaranda</div>
+                    </div>
+                    <div class="scroll-snap-slide">
+                        <img src="images/gallery/Cactus Flower1.jpg" alt="It opens just for 1 day...">
+                        <div class="slide-caption">It opens just for 1 day...</div>
+                    </div>
+                    <div class="scroll-snap-slide">
+                        <img src="images/gallery/entertainment area1.jpg" alt="Entertainment Areas">
+                        <div class="slide-caption">Entertainment Areas</div>
+                    </div>
+                    <div class="scroll-snap-slide">
+                        <img src="images/gallery/modern amenities1.jpg" alt="Modern Amenities">
+                        <div class="slide-caption">Modern Amenities</div>
+                    </div>
+                </div>
+
+                <button class="scroll-controls prev-btn" onclick="scrollToPrevious()"
+                    aria-label="Previous image">‹</button>
+                <button class="scroll-controls next-btn" onclick="scrollToNext()" aria-label="Next image">›</button>
+                <button class="fullscreen-btn" onclick="toggleFullscreen()" aria-label="Toggle fullscreen">⛶</button>
+            </div>
+
+            <div class="scroll-indicators" id="scrollIndicators">
+                <div class="scroll-indicator active" onclick="scrollToSlide(0)" aria-label="Go to slide 1"></div>
+                <div class="scroll-indicator" onclick="scrollToSlide(1)" aria-label="Go to slide 2"></div>
+                <div class="scroll-indicator" onclick="scrollToSlide(2)" aria-label="Go to slide 3"></div>
+                <div class="scroll-indicator" onclick="scrollToSlide(3)" aria-label="Go to slide 4"></div>
+                <div class="scroll-indicator" onclick="scrollToSlide(4)" aria-label="Go to slide 5"></div>
+                <div class="scroll-indicator" onclick="scrollToSlide(5)" aria-label="Go to slide 6"></div>
+                <div class="scroll-indicator" onclick="scrollToSlide(6)" aria-label="Go to slide 7"></div>
+                <div class="scroll-indicator" onclick="scrollToSlide(7)" aria-label="Go to slide 8"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section-new" id="contact">
+        <div class="contact-header">
+            <h2 class="contact-title">Begin Your Journey</h2>
+            <p class="contact-subtitle">Connect with us to discover your piece of African paradise</p>
+        </div>
+
+        <div class="contact-main-content">
+            <div class="property-facts">
+                <div class="fact-card">
+                    <span class="fact-icon">🏠</span>
+                    <div class="fact-label">Property</div>
+                    <div class="fact-value">Unit 12, Hephzibah Estate<br>Mpumalanga, SA</div>
+                </div>
+
+                <div class="fact-card">
+                    <span class="fact-icon">💰</span>
+                    <div class="fact-label">Price</div>
+                    <div class="fact-value">R3.5M<br><em>Negotiable</em></div>
+                </div>
+
+                <div class="fact-card">
+                    <span class="fact-icon">📏</span>
+                    <div class="fact-label">Land Size</div>
+                    <div class="fact-value">2,000m²<br>Premium location</div>
+                </div>
+
+                <div class="fact-card">
+                    <span class="fact-icon">🛏️</span>
+                    <div class="fact-label">Bedrooms</div>
+                    <div class="fact-value">4 Spacious<br>bedrooms</div>
+                </div>
+
+                <div class="fact-card">
+                    <span class="fact-icon">✈️</span>
+                    <div class="fact-label">International</div>
+                    <div class="fact-value">Virtual tours<br>Legal support</div>
+                </div>
+            </div>
+
+            <div class="contact-form-modern">
+                <div class="form-header">
+                    <h3 class="form-title">Express Your Interest</h3>
+                    <p class="form-subtitle">We'll respond within 24 hours</p>
+                </div>
+
+                <form id="contactForm">
+                    <div class="form-grid-modern">
+                        <div class="form-group-modern">
+                            <input type="text" id="name" name="name" class="form-input-modern" placeholder="Full Name"
+                                required />
+                        </div>
+                        <div class="form-group-modern">
+                            <input type="email" id="email" name="email" class="form-input-modern"
+                                placeholder="Email Address" required />
+                        </div>
+                        <div class="form-group-modern">
+                            <input type="tel" id="phone" name="phone" class="form-input-modern"
+                                placeholder="Phone Number" />
+                        </div>
+                        <div class="form-group-modern">
+                            <input type="text" id="country" name="country" class="form-input-modern"
+                                placeholder="Your Location" />
+                        </div>
+                        <div class="form-group-modern full">
+                            <select id="interest" name="interest" class="form-input-modern"
+                                aria-label="Your interest in this property">
+                                <option value="">Your Interest</option>
+                                <option value="primary">Primary residence</option>
+                                <option value="holiday">Holiday home</option>
+                                <option value="investment">Investment property</option>
+                                <option value="retirement">Retirement home</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group-modern full">
+                        <textarea id="message" name="message" class="form-textarea-modern"
+                            placeholder="Tell us about your interest in this property..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn-modern">Send Inquiry</button>
+                </form>
+            </div>
+
+            <div class="map-panel">
+                <div class="map-header">
+                    <h3 class="map-title">Property Location</h3>
+                </div>
+
+                <div class="map-container-modern">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d10532.112798737446!2d29.070858120147598!3d-25.5888452321207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDM1JzE1LjgiUyAyOcKwMDQnMjMuOCJF!5e1!3m2!1sen!2sza!4v1757597752802!5m2!1sen!2sza"
+                        width="100%" height="100%" allowfullscreen="" loading="lazy"
+                        title="Hephzibah Estate Unit 12 Property Location Map">
+                    </iframe>
+                </div>
+
+                <div class="location-details-modern">
+                    <div class="location-highlight">Hephzibah Estate</div>
+                    Mpumalanga Province<br>
+                    50km from Witbank<br>
+                    <div class="location-highlight">GPS: -25.5877, 29.0734</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-footer">
+            © 2025 Hephzibah Estate Unit 12. A unique opportunity to own your piece of African paradise.
+        </div>
+    </section>
+
+    <button class="back-to-top visible" id="backToTop">↑</button>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]:not(.logo)').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    const navbar = document.getElementById("navbar");
+                    navbar.classList.remove("expanded");
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                    });
+                }
+            });
+        });
+
+        document.querySelector(".logo").addEventListener("click", function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+            });
+        });
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            },
+            {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px",
+            }
+        );
+
+        document.querySelectorAll(".section, .features-section").forEach((section) => {
+            observer.observe(section);
+        });
+
+        const navbar = document.getElementById("navbar");
+        const navTrigger = document.getElementById("navTrigger");
+
+        navTrigger.addEventListener("click", () => {
+            navbar.classList.toggle("expanded");
+        });
+
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navbar.classList.remove("expanded");
+            });
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!navbar.contains(e.target)) {
+                navbar.classList.remove("expanded");
+            }
+        });
+
+        const backToTopButton = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 300) {
+                backToTopButton.classList.add("visible");
+            } else {
+                backToTopButton.classList.remove("visible");
+            }
+        });
+
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        });
+
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            const emailSubject = "Inquiry about Hephzibah Estate Unit 12";
+            const emailBody = `
+Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone}
+Country: ${data.country}
+Interest: ${data.interest}
+Message: ${data.message}
+    `;
+
+            const mailtoLink = `mailto:s.mihai.pvt@protonmail.com?subject=${encodeURIComponent(
+                emailSubject
+            )}&body=${encodeURIComponent(emailBody)}`;
+
+            window.location.href = mailtoLink;
+            alert("Thank you for your interest! Your email client should open with a pre-filled message. Please send it to complete your inquiry.");
+            this.reset();
+        });
+
+        const videoContainer = document.getElementById('videoContainer');
+        const video = document.getElementById('mainVideo');
+        const videoControls = document.getElementById('videoControls');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const videoProgress = document.getElementById('videoProgress');
+        const progressFilled = document.getElementById('progressFilled');
+        const videoTime = document.getElementById('videoTime');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+        const videoCurtain = document.getElementById('videoCurtain');
+
+        let isFullscreen = false;
+        let controlsTimeout = null;
+
+        function togglePlay() {
+            if (video.paused) {
+                video.play();
+                playPauseBtn.textContent = 'Pause';
+                hideCurtain();
+            } else {
+                video.pause();
+                playPauseBtn.textContent = 'Play';
+                showControls();
+                clearTimeout(controlsTimeout);
+            }
+        }
+
+        function hideCurtain() {
+            videoCurtain.classList.add('hidden');
+        }
+
+        function showCurtain() {
+            videoCurtain.classList.remove('hidden');
+        }
+
+        // Hide curtain when video plays
+        video.addEventListener('play', hideCurtain);
+
+        // Show curtain when video ends
+        video.addEventListener('ended', () => {
+            showCurtain();
+            playPauseBtn.textContent = 'Play';
+        });
+
+        // Click curtain to play video
+        videoCurtain.addEventListener('click', (e) => {
+            e.stopPropagation();
+            togglePlay();
+        });
+
+        playPauseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            togglePlay();
+        });
+
+        video.addEventListener('click', togglePlay);
+
+        video.addEventListener('timeupdate', () => {
+            const percent = (video.currentTime / video.duration) * 100;
+            progressFilled.style.width = percent + '%';
+            videoTime.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
+        });
+
+        videoProgress.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const rect = videoProgress.getBoundingClientRect();
+            const pos = (e.clientX - rect.left) / rect.width;
+            video.currentTime = pos * video.duration;
+        });
+
+        function formatTime(seconds) {
+            if (isNaN(seconds)) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        fullscreenBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (!isFullscreen) {
+                if (videoContainer.requestFullscreen) {
+                    videoContainer.requestFullscreen();
+                } else if (videoContainer.webkitRequestFullscreen) {
+                    videoContainer.webkitRequestFullscreen();
+                } else if (videoContainer.mozRequestFullScreen) {
+                    videoContainer.mozRequestFullScreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                }
+            }
+        });
+
+        document.addEventListener('fullscreenchange', handleFullscreenChange);
+        document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+        document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+
+        function handleFullscreenChange() {
+            isFullscreen = !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement);
+
+            fullscreenBtn.textContent = isFullscreen ? 'Exit Fullscreen' : 'Fullscreen';
+
+            showControls();
+
+            if (!video.paused) {
+                scheduleHideControls();
+            }
+        }
+
+        videoContainer.addEventListener('mousemove', handleMouseActivity);
+        videoContainer.addEventListener('click', handleMouseActivity);
+
+        function handleMouseActivity(e) {
+            showControls();
+            clearTimeout(controlsTimeout);
+
+            if (!video.paused) {
+                scheduleHideControls();
+            }
+        }
+
+        function scheduleHideControls() {
+            clearTimeout(controlsTimeout);
+            controlsTimeout = setTimeout(() => {
+                if (!video.paused) {
+                    hideControls();
+                }
+            }, 3000);
+        }
+
+        function showControls() {
+            videoControls.classList.remove('hide');
+        }
+
+        function hideControls() {
+            videoControls.classList.add('hide');
+        }
+
+        video.addEventListener('play', () => {
+            playPauseBtn.textContent = 'Pause';
+            scheduleHideControls();
+        });
+
+        video.addEventListener('pause', () => {
+            playPauseBtn.textContent = 'Play';
+            showControls();
+            clearTimeout(controlsTimeout);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+            switch (e.key) {
+                case ' ':
+                case 'k':
+                    e.preventDefault();
+                    togglePlay();
+                    break;
+                case 'f':
+                    e.preventDefault();
+                    fullscreenBtn.click();
+                    break;
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    video.currentTime = Math.max(0, video.currentTime - 5);
+                    break;
+                case 'ArrowRight':
+                    e.preventDefault();
+                    video.currentTime = Math.min(video.duration, video.currentTime + 5);
+                    break;
+            }
+        });
+
+        showControls();
+
+        const galleryModal = document.getElementById('galleryModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+        const modalCounter = document.getElementById('modalCounter');
+        const modalPrev = document.getElementById('modalPrev');
+        const modalNext = document.getElementById('modalNext');
+        const modalClose = document.getElementById('modalClose');
+
+        const galleryImages = [
+            {
+                src: 'images/gallery/Spacious Family Home.jpg',
+                alt: 'Spacious Family Home',
+                caption: 'Spacious Family Home'
+            },
+            {
+                src: 'images/gallery/mature garden1.jpg',
+                alt: 'Mature Gardens',
+                caption: 'Mature Gardens'
+            },
+            {
+                src: 'images/gallery/kudu2.jpg',
+                alt: 'Wildlife Visitors',
+                caption: 'Wildlife Visitors'
+            },
+            {
+                src: 'images/gallery/sunrize1.jpg',
+                alt: 'Stunning Sunrises',
+                caption: 'Stunning Sunrises'
+            },
+            {
+                src: 'images/gallery/entertainment area1.jpg',
+                alt: 'Entertainment Areas',
+                caption: 'Entertainment Areas'
+            },
+            {
+                src: 'images/gallery/modern amenities1.jpg',
+                alt: 'Modern Amenities',
+                caption: 'Modern Amenities'
+            }
+        ];
+
+        let currentModalIndex = 0;
+
+        function openGalleryModal(index) {
+            currentModalIndex = index;
+            updateModalContent();
+            galleryModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGalleryModal() {
+            galleryModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function updateModalContent() {
+            const current = galleryImages[currentModalIndex];
+            modalImage.src = current.src;
+            modalImage.alt = current.alt;
+            modalCaption.textContent = current.caption;
+            modalCounter.textContent = `${currentModalIndex + 1} / ${galleryImages.length}`;
+        }
+
+        function navigateModal(direction) {
+            if (direction === 'next') {
+                currentModalIndex = (currentModalIndex + 1) % galleryImages.length;
+            } else {
+                currentModalIndex = (currentModalIndex - 1 + galleryImages.length) % galleryImages.length;
+            }
+            updateModalContent();
+        }
+
+        document.querySelectorAll('.gallery-item').forEach((item, index) => {
+            item.addEventListener('click', () => {
+                openGalleryModal(index);
+            });
+        });
+
+        modalNext.addEventListener('click', () => navigateModal('next'));
+        modalPrev.addEventListener('click', () => navigateModal('prev'));
+        modalClose.addEventListener('click', closeGalleryModal);
+
+        galleryModal.addEventListener('click', (e) => {
+            if (e.target === galleryModal) {
+                closeGalleryModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (galleryModal.classList.contains('active')) {
+                switch (e.key) {
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        navigateModal('prev');
+                        break;
+                    case 'ArrowRight':
+                        e.preventDefault();
+                        navigateModal('next');
+                        break;
+                    case 'Escape':
+                        e.preventDefault();
+                        closeGalleryModal();
+                        break;
+                }
+            }
+        });
+
+        let modalTouchStartX = 0;
+        let modalTouchStartY = 0;
+        let isModalSwiping = false;
+
+        galleryModal.addEventListener('touchstart', (e) => {
+            if (e.target === modalImage || e.target.closest('.modal-content')) {
+                modalTouchStartX = e.touches[0].clientX;
+                modalTouchStartY = e.touches[0].clientY;
+                isModalSwiping = true;
+            }
+        });
+
+        galleryModal.addEventListener('touchmove', (e) => {
+            if (!isModalSwiping) return;
+
+            const currentX = e.touches[0].clientX;
+            const currentY = e.touches[0].clientY;
+            const diffX = modalTouchStartX - currentX;
+            const diffY = modalTouchStartY - currentY;
+
+            if (Math.abs(diffX) > Math.abs(diffY)) {
+                e.preventDefault();
+            }
+        });
+
+        galleryModal.addEventListener('touchend', (e) => {
+            if (!isModalSwiping) return;
+            isModalSwiping = false;
+
+            const touchEndX = e.changedTouches[0].clientX;
+            const diff = modalTouchStartX - touchEndX;
+            const threshold = 50;
+
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    navigateModal('next');
+                } else {
+                    navigateModal('prev');
+                }
+            }
+        });
+
+        let currentScrollSlide = 0;
+        const scrollContainer = document.getElementById('scrollSnapContainer');
+        const scrollIndicators = document.querySelectorAll('.scroll-indicator');
+        const mainSlideshow = document.getElementById('mainSlideshow');
+        let slideshowControlsTimeout;
+        let autoAdvanceInterval = null;
+        const AUTO_ADVANCE_DELAY = 4000;
+        let internalScrollToNextRef = null;
+        let realSlideCount = 0;
+        let isTransitioning = false;
+        let cloneJumpTimeout = null;
+        let scrollEndTimeout = null;
+
+        // Initialize cloned slides for infinite loop
+        function initializeInfiniteLoop() {
+            const slides = Array.from(scrollContainer.querySelectorAll('.scroll-snap-slide'));
+            realSlideCount = slides.length;
+
+            if (realSlideCount === 0) {
+                console.error('No slides found!');
+                return;
+            }
+
+            // Clone first and last slides
+            const firstClone = slides[0].cloneNode(true);
+            const lastClone = slides[realSlideCount - 1].cloneNode(true);
+
+            // Mark clones for identification
+            firstClone.classList.add('cloned-slide');
+            lastClone.classList.add('cloned-slide');
+
+            // Append first slide clone to end
+            scrollContainer.appendChild(firstClone);
+
+            // Prepend last slide clone to beginning
+            scrollContainer.insertBefore(lastClone, slides[0]);
+
+            // Start at real first slide (index 1 after prepending clone)
+            currentScrollSlide = 1;
+            const slideWidth = scrollContainer.clientWidth;
+            scrollContainer.scrollTo({
+                left: slideWidth * currentScrollSlide,
+                behavior: 'auto'
+            });
+        }
+
+        function startAutoAdvance() {
+            if (autoAdvanceInterval) return;
+            autoAdvanceInterval = setInterval(() => {
+                if (internalScrollToNextRef) {
+                    internalScrollToNextRef();
+                }
+            }, AUTO_ADVANCE_DELAY);
+        }
+
+        function stopAutoAdvance() {
+            if (autoAdvanceInterval) {
+                clearInterval(autoAdvanceInterval);
+                autoAdvanceInterval = null;
+            }
+        }
+
+        function resetAutoAdvance() {
+            stopAutoAdvance();
+            // Only restart if not in fullscreen mode
+            if (!mainSlideshow.classList.contains('fullscreen')) {
+                startAutoAdvance();
+            }
+        }
+
+        function showSlideControls() {
+            mainSlideshow.classList.remove('controls-hidden');
+            mainSlideshow.classList.add('user-interacting');
+            clearTimeout(slideshowControlsTimeout);
+            slideshowControlsTimeout = setTimeout(() => {
+                mainSlideshow.classList.add('controls-hidden');
+                mainSlideshow.classList.remove('user-interacting');
+            }, 1500);
+        }
+
+        function hideSlideControls() {
+            mainSlideshow.classList.add('controls-hidden');
+            mainSlideshow.classList.remove('user-interacting');
+        }
+
+        function initializeAutoHide() {
+            initializeInfiniteLoop();
+            showSlideControls();
+            startAutoAdvance();
+        }
+
+        mainSlideshow.addEventListener('mousemove', showSlideControls);
+        mainSlideshow.addEventListener('touchstart', showSlideControls);
+        mainSlideshow.addEventListener('click', showSlideControls);
+        scrollContainer.addEventListener('scroll', showSlideControls);
+
+        // Pause auto-advance on hover
+        mainSlideshow.addEventListener('mouseenter', stopAutoAdvance);
+        mainSlideshow.addEventListener('mouseleave', () => {
+            if (!mainSlideshow.classList.contains('fullscreen')) {
+                startAutoAdvance();
+            }
+        });
+
+        function scrollToSlide(index, smooth = true) {
+            // Update current slide immediately
+            currentScrollSlide = index;
+
+            // Calculate transform position
+            const slideWidth = scrollContainer.clientWidth;
+            const translateX = -(slideWidth * index);
+
+            // Apply or remove transition
+            if (smooth) {
+                scrollContainer.classList.remove('no-transition');
+            } else {
+                scrollContainer.classList.add('no-transition');
+            }
+
+            // Apply transform
+            scrollContainer.style.transform = `translateX(${translateX}px)`;
+
+            // Update indicators based on real slide position (excluding clones)
+            const realIndex = getRealSlideIndex(index);
+            updateScrollIndicators(realIndex);
+            showSlideControls();
+        }
+
+        // Store reference to internal function BEFORE window override
+        const internalScrollToSlide = scrollToSlide;
+
+        function getRealSlideIndex(index) {
+            // Convert current index to real slide index (0-based, excluding clones)
+            if (index === 0) {
+                // On last clone, show last real slide indicator
+                return realSlideCount - 1;
+            } else if (index === realSlideCount + 1) {
+                // On first clone, show first real slide indicator
+                return 0;
+            } else {
+                // On real slide, adjust for prepended clone
+                return index - 1;
+            }
+        }
+
+        function scrollToNext() {
+            // Simple: just go to the next slide (including clone if we're at the last real slide)
+            const nextSlide = currentScrollSlide + 1;
+            internalScrollToSlide(nextSlide);
+        }
+
+        function scrollToPrevious() {
+            // Simple: just go to the previous slide (including clone if we're at the first real slide)
+            const prevSlide = currentScrollSlide - 1;
+            internalScrollToSlide(prevSlide);
+        }
+
+        function updateScrollIndicators(activeIndex) {
+            scrollIndicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === activeIndex);
+            });
+        }
+
+        // Store references to internal functions (internalScrollToSlide already declared above)
+        const internalScrollToNext = scrollToNext;
+        const internalScrollToPrevious = scrollToPrevious;
+        internalScrollToNextRef = scrollToNext;
+
+        window.toggleFullscreen = function () {
+            mainSlideshow.classList.toggle('fullscreen');
+            const navbar = document.getElementById('navbar');
+
+            if (mainSlideshow.classList.contains('fullscreen')) {
+                document.body.style.overflow = 'hidden';
+                navbar.classList.add('hide-for-fullscreen');
+                showSlideControls();
+                mainSlideshow.setAttribute('tabindex', '-1');
+                mainSlideshow.focus();
+                stopAutoAdvance();
+            } else {
+                document.body.style.overflow = '';
+                navbar.classList.remove('hide-for-fullscreen');
+                showSlideControls();
+                mainSlideshow.blur();
+                startAutoAdvance();
+            }
+        };
+
+        window.scrollToSlide = function (index) {
+            // When called from indicator dots, adjust index for cloned slides
+            // Dots use 0-based index for real slides, we need to add 1 for the prepended clone
+            internalScrollToSlide(index + 1);
+            resetAutoAdvance();
+        };
+
+        window.scrollToNext = function () {
+            internalScrollToNext();
+            resetAutoAdvance();
+        };
+
+        window.scrollToPrevious = function () {
+            internalScrollToPrevious();
+            resetAutoAdvance();
+        };
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+                return;
+            }
+
+            if (galleryModal && galleryModal.classList.contains('active')) {
+                return;
+            }
+
+            const isFullscreen = mainSlideshow && mainSlideshow.classList.contains('fullscreen');
+
+            if (isFullscreen) {
+                switch (e.key) {
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        internalScrollToPrevious();
+                        break;
+                    case 'ArrowRight':
+                        e.preventDefault();
+                        internalScrollToNext();
+                        break;
+                    case 'Escape':
+                        e.preventDefault();
+                        window.toggleFullscreen();
+                        break;
+                }
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', initializeAutoHide);
+
+        // Listen for transition end to detect when we reach a clone
+        scrollContainer.addEventListener('transitionend', (e) => {
+            // Only handle transform transitions, not other CSS transitions
+            if (e.propertyName !== 'transform') return;
+
+            // Check if we've landed on a clone and need to jump
+            if (currentScrollSlide === realSlideCount + 1) {
+                // On first clone - instantly jump to real first slide
+                internalScrollToSlide(1, false); // Use internal function to avoid +1 offset
+            } else if (currentScrollSlide === 0) {
+                // On last clone - instantly jump to real last slide
+                internalScrollToSlide(realSlideCount, false); // Use internal function to avoid +1 offset
+            }
+        });
+
+        mainSlideshow.addEventListener('click', (e) => {
+            if (mainSlideshow.classList.contains('fullscreen') &&
+                (e.target === mainSlideshow || e.target === scrollContainer)) {
+                toggleFullscreen();
+            }
+        });
+
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let isSwiping = false;
+
+        scrollContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            isSwiping = true;
+        });
+
+        scrollContainer.addEventListener('touchmove', (e) => {
+            if (!isSwiping) return;
+
+            const currentX = e.touches[0].clientX;
+            const currentY = e.touches[0].clientY;
+            const diffX = touchStartX - currentX;
+            const diffY = touchStartY - currentY;
+
+            if (Math.abs(diffX) > Math.abs(diffY)) {
+                e.preventDefault();
+            }
+        });
+
+        scrollContainer.addEventListener('touchend', (e) => {
+            if (!isSwiping) return;
+            isSwiping = false;
+
+            const touchEndX = e.changedTouches[0].clientX;
+            const diff = touchStartX - touchEndX;
+            const threshold = 50;
+
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    scrollToNext();
+                } else {
+                    scrollToPrevious();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
