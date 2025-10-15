@@ -2512,7 +2512,7 @@
                     <p class="form-subtitle">We'll respond within 24 hours</p>
                 </div>
 
-                <form id="contactForm">
+                <form id="contactForm" action="https://formspree.io/f/mjkajrke" method="POST">
                     <div class="form-grid-modern">
                         <div class="form-group-modern">
                             <input type="text" id="name" name="name" class="form-input-modern" placeholder="Full Name"
@@ -2660,31 +2660,40 @@
             });
         });
 
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
+        document.getElementById("contactForm").addEventListener("submit", async function (e) {
             e.preventDefault();
-            const formData = new FormData(this);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
-            });
 
-            const emailSubject = "Inquiry about Hephzibah Estate Unit 12";
-            const emailBody = `
-Name: ${data.name}
-Email: ${data.email}
-Phone: ${data.phone}
-Country: ${data.country}
-Interest: ${data.interest}
-Message: ${data.message}
-    `;
+            const submitBtn = this.querySelector('.submit-btn-modern');
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
 
-            const mailtoLink = `mailto:s.mihai.pvt@protonmail.com?subject=${encodeURIComponent(
-                emailSubject
-            )}&body=${encodeURIComponent(emailBody)}`;
+            try {
+                const formData = new FormData(this);
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
 
-            window.location.href = mailtoLink;
-            alert("Thank you for your interest! Your email client should open with a pre-filled message. Please send it to complete your inquiry.");
-            this.reset();
+                if (response.ok) {
+                    alert("Thank you for your interest! Your inquiry has been sent successfully. We'll respond within 24 hours.");
+                    this.reset();
+                    submitBtn.textContent = 'Sent Successfully!';
+                    setTimeout(() => {
+                        submitBtn.textContent = originalBtnText;
+                        submitBtn.disabled = false;
+                    }, 3000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                alert("Oops! There was a problem submitting your form. Please try again or email us directly at s.mihai.pvt@protonmail.com");
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            }
         });
 
         const videoContainer = document.getElementById('videoContainer');
